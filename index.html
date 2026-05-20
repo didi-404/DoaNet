@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe com Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="topo-conteudo">
+            <span class="logo">💚</span>
+            <h1>Doe com Amor</h1>
+            <p>
+                Uma plataforma simples para incentivar doações de roupas, alimentos e livros
+                para pessoas e instituições que precisam.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Escolha o tipo de doação</h2>
+            <p>
+                Selecione uma das abas abaixo, informe a quantidade que deseja doar
+                e escolha o local de entrega.
+            </p>
+        </section>
+
+        <section class="abas">
+            <button class="aba-botao ativo" data-aba="roupas">👕 Roupas</button>
+            <button class="aba-botao" data-aba="alimentos">🥫 Alimentos</button>
+            <button class="aba-botao" data-aba="livros">📚 Livros</button>
+        </section>
+
+        <section id="roupas" class="conteudo-aba ativo">
+            <div class="card-doacao">
+                <div class="card-info">
+                    <div class="icone-grande">👕</div>
+                    <h2>Doação de Roupas</h2>
+                    <p>
+                        Doe roupas em bom estado, como camisetas, calças, agasalhos,
+                        roupas infantis, sapatos e cobertores.
+                    </p>
+
+                    <div class="lista-beneficios">
+                        <span>✅ Ajuda famílias em situação de necessidade</span>
+                        <span>✅ Incentiva o reaproveitamento</span>
+                        <span>✅ Leva conforto para quem precisa</span>
+                    </div>
+                </div>
+
+                <form class="formulario-doacao" data-tipo="roupas">
+                    <h3>Registrar doação</h3>
+
+                    <label for="quantidade-roupas">Quantidade de peças</label>
+                    <input type="number" id="quantidade-roupas" min="1" placeholder="Ex: 10" required>
+
+                    <label for="local-roupas">Localização para doação</label>
+                    <select id="local-roupas" required>
+                        <option value="">Selecione um local</option>
+                        <option>Centro Comunitário</option>
+                        <option>Casa de Apoio</option>
+                        <option>Escola Municipal</option>
+                        <option>Igreja do Bairro</option>
+                    </select>
+
+                    <label for="obs-roupas">Observações</label>
+                    <textarea id="obs-roupas" placeholder="Ex: roupas infantis, roupas de frio..."></textarea>
+
+                    <button type="submit">Confirmar doação</button>
+
+                    <p class="mensagem-sucesso"></p>
+                </form>
+            </div>
+        </section>
+
+        <section id="alimentos" class="conteudo-aba">
+            <div class="card-doacao">
+                <div class="card-info">
+                    <div class="icone-grande">🥫</div>
+                    <h2>Doação de Alimentos</h2>
+                    <p>
+                        Contribua com alimentos não perecíveis, como arroz, feijão,
+                        macarrão, óleo, leite em pó, açúcar e enlatados.
+                    </p>
+
+                    <div class="lista-beneficios">
+                        <span>✅ Ajuda no combate à fome</span>
+                        <span>✅ Fortalece campanhas solidárias</span>
+                        <span>✅ Apoia instituições locais</span>
+                    </div>
+                </div>
+
+                <form class="formulario-doacao" data-tipo="alimentos">
+                    <h3>Registrar doação</h3>
+
+                    <label for="quantidade-alimentos">Quantidade de itens</label>
+                    <input type="number" id="quantidade-alimentos" min="1" placeholder="Ex: 5" required>
+
+                    <label for="local-alimentos">Localização para doação</label>
+                    <select id="local-alimentos" required>
+                        <option value="">Selecione um local</option>
+                        <option>Banco de Alimentos</option>
+                        <option>Casa de Apoio</option>
+                        <option>Centro Comunitário</option>
+                        <option>Instituição Social</option>
+                    </select>
+
+                    <label for="obs-alimentos">Observações</label>
+                    <textarea id="obs-alimentos" placeholder="Ex: arroz, feijão, macarrão..."></textarea>
+
+                    <button type="submit">Confirmar doação</button>
+
+                    <p class="mensagem-sucesso"></p>
+                </form>
+            </div>
+        </section>
+
+        <section id="livros" class="conteudo-aba">
+            <div class="card-doacao">
+                <div class="card-info">
+                    <div class="icone-grande">📚</div>
+                    <h2>Doação de Livros</h2>
+                    <p>
+                        Doe livros didáticos, infantis, romances, apostilas ou materiais
+                        de estudo que ainda estejam em boas condições.
+                    </p>
+
+                    <div class="lista-beneficios">
+                        <span>✅ Incentiva a leitura</span>
+                        <span>✅ Ajuda estudantes e escolas</span>
+                        <span>✅ Compartilha conhecimento</span>
+                    </div>
+                </div>
+
+                <form class="formulario-doacao" data-tipo="livros">
+                    <h3>Registrar doação</h3>
+
+                    <label for="quantidade-livros">Quantidade de livros</label>
+                    <input type="number" id="quantidade-livros" min="1" placeholder="Ex: 8" required>
+
+                    <label for="local-livros">Localização para doação</label>
+                    <select id="local-livros" required>
+                        <option value="">Selecione um local</option>
+                        <option>Biblioteca Comunitária</option>
+                        <option>Escola Municipal</option>
+                        <option>Projeto Social</option>
+                        <option>Centro Cultural</option>
+                    </select>
+
+                    <label for="obs-livros">Observações</label>
+                    <textarea id="obs-livros" placeholder="Ex: livros infantis, didáticos, romance..."></textarea>
+
+                    <button type="submit">Confirmar doação</button>
+
+                    <p class="mensagem-sucesso"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="contato">
+            <h2>Contato do responsável</h2>
+            <p>
+                Para dúvidas, parcerias ou informações sobre as doações, entre em contato pelo email:
+            </p>
+            <a href="mailto:prc.rgc@gmail.com">prc.rgc@gmail.com</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Doe com Amor. Todos os direitos reservados para Paulo Costa.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

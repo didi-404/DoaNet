@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #f2fff7, #e8f6ff);
+    color: #263238;
+    min-height: 100vh;
+}
+
+.topo {
+    background: linear-gradient(135deg, #009688, #4caf50);
+    color: white;
+    text-align: center;
+    padding: 48px 20px;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.topo-conteudo {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.topo h1 {
+    font-size: 2.7rem;
+    margin-bottom: 12px;
+}
+
+.topo p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.intro h2 {
+    color: #00796b;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.intro p {
+    color: #546e7a;
+    line-height: 1.6;
+}
+
+.abas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.aba-botao {
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: white;
+    color: #00796b;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+.aba-botao:hover {
+    transform: translateY(-3px);
+    background: #e0f2f1;
+}
+
+.aba-botao.ativo {
+    background: #00796b;
+    color: white;
+}
+
+.conteudo-aba {
+    display: none;
+    animation: aparecer 0.4s ease;
+}
+
+.conteudo-aba.ativo {
+    display: block;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-doacao {
+    background: white;
+    border-radius: 28px;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+.card-info {
+    padding: 12px;
+}
+
+.icone-grande {
+    font-size: 4.5rem;
+    margin-bottom: 18px;
+}
+
+.card-info h2 {
+    color: #00796b;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.card-info p {
+    line-height: 1.7;
+    color: #455a64;
+    margin-bottom: 20px;
+}
+
+.lista-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lista-beneficios span {
+    background: #f1f8e9;
+    padding: 13px 15px;
+    border-radius: 15px;
+    color: #33691e;
+    font-size: 0.95rem;
+}
+
+.formulario-doacao {
+    background: #f9fbfb;
+    padding: 26px;
+    border-radius: 24px;
+    border: 1px solid #dcebea;
+}
+
+.formulario-doacao h3 {
+    color: #37474f;
+    margin-bottom: 18px;
+    font-size: 1.4rem;
+}
+
+.formulario-doacao label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #455a64;
+}
+
+.formulario-doacao input,
+.formulario-doacao select,
+.formulario-doacao textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 16px;
+    border: 1px solid #cfd8dc;
+    border-radius: 13px;
+    outline: none;
+    font-size: 1rem;
+    background: white;
+    transition: 0.2s;
+}
+
+.formulario-doacao input:focus,
+.formulario-doacao select:focus,
+.formulario-doacao textarea:focus {
+    border-color: #009688;
+    box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.15);
+}
+
+.formulario-doacao textarea {
+    min-height: 88px;
+    resize: none;
+}
+
+.formulario-doacao button {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #009688, #4caf50);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario-doacao button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(0, 150, 136, 0.32);
+}
+
+.mensagem-sucesso {
+    display: none;
+    margin-top: 16px;
+    padding: 13px;
+    border-radius: 13px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contato {
+    margin-top: 35px;
+    background: white;
+    padding: 28px;
+    border-radius: 26px;
+    text-align: center;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contato h2 {
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.contato p {
+    color: #546e7a;
+    margin-bottom: 10px;
+}
+
+.contato a {
+    display: inline-block;
+    color: white;
+    background: #00796b;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contato a:hover {
+    background: #004d40;
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: 45px;
+    background: #263238;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+footer p {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 800px) {
+    .topo h1 {
+        font-size: 2.1rem;
+    }
+
+    .card-doacao {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+
+    .card-info {
+        text-align: center;
+    }
+
+    .icone-grande {
+        font-size: 3.7rem;
+    }
+
+    .card-info h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .topo {
+        padding: 38px 16px;
+    }
+
+    .aba-botao {
+        width: 100%;
+    }
+
+    .formulario-doacao {
+        padding: 20px;
+    }
+
+    .card-doacao {
+        padding: 20px;
+    }
+}
